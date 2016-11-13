@@ -1,0 +1,1 @@
+export let SWITCH_CATEGORY = 'SWITCH_CATEGORY';
