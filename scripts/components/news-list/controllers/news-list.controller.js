@@ -1,7 +1,4 @@
-import headerPubSubInstance from 'components/header/publish-subscribe/pubsub';
-import * as EVENTS from 'core/events/constants/events.types.constants';
-
-export default class NewsController {
+class NewsController {
     constructor(newsView, newsModel, newsService) {
         this._newsView = newsView;
         this._newsModel = newsModel;

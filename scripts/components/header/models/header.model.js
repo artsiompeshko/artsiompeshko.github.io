@@ -1,8 +1,6 @@
-import * as HEADER_CONSTANTS from 'components/header/constants/header.constants'
-
-export default class HeaderModel {
+class HeaderModel {
     constructor() {
-        this.headers = Object.keys(HEADER_CONSTANTS).map((header) => HEADER_CONSTANTS[header]);
+        this.headers = Object.keys(HEADER_TYPES).map((header) => HEADER_TYPES[header]);
     }
 
     getHeaders() {

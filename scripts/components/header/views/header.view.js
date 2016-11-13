@@ -1,8 +1,4 @@
-import pubSubInstance from 'components/header/publish-subscribe/pubsub';
-import * as EVENTS from 'core/events/constants/events.types.constants';
-import * as HEADER_TYPES from 'components/header/constants/header.constants';
-
-export default class HeaderView {
+class HeaderView {
     constructor() {
         this._view = this._buildView();
     }
@@ -23,7 +19,7 @@ export default class HeaderView {
                     </nav>`);
 
         view.find('a.navbar-brand').click((e) => {
-            pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category);
+            headerPubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category);
         });
 
         return view;
@@ -38,7 +34,7 @@ export default class HeaderView {
             );
 
             menuItem.click((e) => {
-                pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, headerItem.category);
+                headerPubSubInstance.publish(EVENTS.SWITCH_CATEGORY, headerItem.category);
             })
 
             list.append(menuItem);

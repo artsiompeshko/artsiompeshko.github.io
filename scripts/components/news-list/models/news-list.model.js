@@ -1,4 +1,4 @@
-export default class NewsModel {
+class NewsModel {
     constructor() {
         this._news = [];
     }

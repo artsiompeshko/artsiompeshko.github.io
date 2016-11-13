@@ -1,14 +1,14 @@
-export default class NewsView {
+class NewsView {
     constructor() {
         this._view = this._buildView();
     }
 
     _buildView() {
-        return $(`
-            <div>
+        return $(
+            `<div>
                 <div class='news'></div>
-            </div>
-        `);
+            </div>`
+        );
     }
 
     updateView(news) {
@@ -16,16 +16,16 @@ export default class NewsView {
         container.empty();
 
         for (let data of news) {
-            let newsItem = $(`
-                <div class="jumbotron">
+            let newsItem = $(
+                `<div class="jumbotron">
                     <img src="${data.urlsToLogos.medium}" class="img-fluid" alt="image of a news site">
                     <p class="lead">${data.description}</p>
                         <hr class="my-2">
                         <p class="lead">
                             <a class="btn btn-primary btn-lg" href="${data.url}" role="button">Read News</a>
                         </p>
-                </div>
-            `);
+                </div>`
+            );
 
             container.append(newsItem);
         }

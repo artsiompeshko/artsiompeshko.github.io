@@ -1,6 +1,4 @@
-import * as API from 'core/api/api.constants';
-
-export default class NewsService {
+class NewsService {
     constructor() {
 
     }
