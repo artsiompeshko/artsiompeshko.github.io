@@ -75,6 +75,17 @@
         }
     }
 
+
+    class BasicView {
+        constructor() {
+            this._view = this._buildView();
+        }
+
+        getView() {
+            return this._view;
+        }
+    }
+
     /*
         HEADER
         ----------------------------------------------------------------------------
@@ -116,27 +127,19 @@
     };
 
     class HeaderController {
-        constructor(headerView, headerModel) {
+        constructor(headerView, sourceHeaders) {
             this._headerView = headerView;
-            this._headerModel = headerModel;
+            this._sourceHeaders = sourceHeaders;
 
             this._updateView();
         }
 
         _updateView() {
-            this._headerView.updateView(this._headerModel.getHeaders());
+            this._headerView.updateView(this._sourceHeaders);
         }
     }
 
-    class HeaderModel {
-        constructor() {
-            this.headers = Object.keys(HEADER_TYPES).map((header) => HEADER_TYPES[header]);
-        }
-
-        getHeaders() {
-            return this.headers;
-        }
-    }
+    let sourceHeaders = Object.keys(HEADER_TYPES).map(header => HEADER_TYPES[header]);
 
     let headerPubSubInstance = {
         topics: {},
@@ -165,13 +168,9 @@
         }
     };
 
-    class HeaderView {
+    class HeaderView extends BasicView {
         constructor() {
-            this._view = this._buildView();
-        }
-
-        getView() {
-            return this._view;
+            super();
         }
 
         _buildView() {
@@ -185,9 +184,7 @@
                             </div>
                         </nav>`);
 
-            view.find('a.navbar-brand').click((e) => {
-                headerPubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category);
-            });
+            view.find('a.navbar-brand').click(e => headerPubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category));
 
             return view;
         }
@@ -210,9 +207,8 @@
     }
 
 
-    let headerModel = new HeaderModel(),
-        headerView = new HeaderView(),
-        headerController = new HeaderController(headerView, headerModel);
+    let headerView = new HeaderView(),
+        headerController = new HeaderController(headerView, sourceHeaders);
 
     $(function() {
         let header = $('header');
@@ -226,11 +222,8 @@
     */
 
     class NewsController {
-        constructor(newsView, newsModel) {
+        constructor(newsView) {
             this._newsView = newsView;
-            this._newsModel = newsModel;
-
-            headerPubSubInstance.subscribe(EVENTS.SWITCH_CATEGORY, this.updateNews.bind(this));
         }
 
         updateNews(category) {
@@ -242,34 +235,17 @@
                 .then(response => response.json())
                 .then(data => data.sources)
                 .then(news => {
-                    this._newsModel.setNews(news);
                     this._newsView.updateView(news);
                 })
 
         }
     }
 
-    class NewsModel {
+    let fetchNews = (options) => fetch(API.REST + `?category=${options.category}`);
+
+    class NewsView extends BasicView {
         constructor() {
-            this._news = [];
-        }
-
-        setNews(news) {
-            this._news = news;
-        }
-
-        getNews() {
-            return _news;
-        }
-    }
-
-    let fetchNews = (options) => {
-        return fetch(API.REST + `?category=${options.category}`);
-    }
-
-    class NewsView {
-        constructor() {
-            this._view = this._buildView();
+            super();
         }
 
         _buildView() {
@@ -299,15 +275,13 @@
                 container.append(newsItem);
             }
         }
-
-        getView() {
-            return this._view;
-        }
     }
 
-    let newsModel = new NewsModel(),
-        newsView = new NewsView(),
-        newsController = new NewsController(newsView, newsModel);
+    let newsView = new NewsView(),
+        newsController = new NewsController(newsView);
+
+    // subscribe
+    headerPubSubInstance.subscribe(EVENTS.SWITCH_CATEGORY, newsController.updateNews.bind(newsController));
 
     $(function() {
         let main = $('main');
@@ -320,17 +294,13 @@
         FOOTER
         ----------------------------------------------------------------------------
     */
-    class FooterView {
+    class FooterView extends BasicView {
         constructor() {
-            this._view = this._buildView();
+            super();
         }
 
         _buildView() {
             return  $(`<span>Provided by <a href='https://newsapi.org/'>https://newsapi.org/</a></span>`);
-        }
-
-        getView() {
-            return this._view;
         }
     }
 
