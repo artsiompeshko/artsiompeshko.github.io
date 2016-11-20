@@ -74,7 +74,6 @@ hr {
 }
 
 .container-fluid {
-    display: flex;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -88,7 +87,6 @@ hr {
 .navbar-brand {
     color: #777;
     font-weight: bold;
-    padding-right: 15px;
 }
 
 .navbar-brand a:focus, .navbar-brand a:hover {
@@ -96,24 +94,25 @@ hr {
 }
 
 .navbar-header {
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
+    display: inline-block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
 }
 
 .nav.navbar-nav {
     list-style: none;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
+    display: inline-block;
     margin: 0;
     padding: 0;
 }
 
 .nav-menu {
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+
 }
 
 .nav-menu a {
