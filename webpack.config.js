@@ -12,6 +12,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, "dist"),
         filename: "[name].entry.js",
+        publicPath: path.join(__dirname, "dist/")
     },
     resolve: {
         root: [
