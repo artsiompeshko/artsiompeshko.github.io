@@ -1,14 +1,11 @@
-export default class NewsView {
+import BasicView from 'core/views/basic.view';
+export default class NewsView extends BasicView {
     constructor() {
-        this._view = this._buildView();
+        super();
     }
 
     _buildView() {
-        return $(`
-            <div>
-                <div class='news'></div>
-            </div>
-        `);
+        return $('<div><div class=\'news\'></div></div>');
     }
 
     updateView(news) {
@@ -29,9 +26,5 @@ export default class NewsView {
 
             container.append(newsItem);
         }
-    }
-
-    getView() {
-        return this._view;
     }
 }

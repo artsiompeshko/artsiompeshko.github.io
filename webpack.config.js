@@ -2,14 +2,16 @@ var webpack = require('webpack'),
     path = require('path');
 
 module.exports = {
-    entry: [
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/dev-server',
-        './app.js'
-    ],
+    entry: {
+        dev: [
+            'webpack-dev-server/client?http://localhost:8080',
+            'webpack/hot/dev-server'
+        ],
+        button: './button.js'
+    },
     output: {
-        path: __dirname,
-        filename: "dist/bundle.js",
+        path: path.join(__dirname, "dist"),
+        filename: "[name].entry.js",
     },
     resolve: {
         root: [
@@ -36,8 +38,13 @@ module.exports = {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
+          $: "jquery",
+          jQuery: "jquery"
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+          compress: {
+              warnings: false
+          }
         })
     ],
     devServer: {

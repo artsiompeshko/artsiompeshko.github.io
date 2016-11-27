@@ -1,15 +1,13 @@
 import HeaderView from 'components/header/views/header.view';
-import HeaderModel from 'components/header/models/header.model';
 
 export default class HeaderController {
-    constructor(headerView, headerModel) {
+    constructor(headerView, sourceHeaders) {
         this._headerView = headerView;
-        this._headerModel = headerModel;
-
+        this._sourceHeaders = sourceHeaders;
         this._updateView();
     }
 
     _updateView() {
-        this._headerView.updateView(this._headerModel.getHeaders());
+        this._headerView.updateView(this._sourceHeaders);
     }
 }

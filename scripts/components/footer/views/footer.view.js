@@ -1,15 +1,12 @@
-export default class FooterView {
+import BasicView from 'core/views/basic.view';
+export default class FooterView extends BasicView {
     constructor() {
-        this._view = this._buildView();
+        super();
     }
 
     _buildView() {
         return  $(`
             <span>Provided by <a href='https://newsapi.org/'>https://newsapi.org/</a></span>
         `);
-    }
-
-    getView() {
-        return this._view;
     }
 }

@@ -1,14 +1,11 @@
 import pubSubInstance from 'components/header/publish-subscribe/pubsub';
 import * as EVENTS from 'core/events/constants/events.types.constants';
-import * as HEADER_TYPES from 'components/header/constants/header.constants';
+import HEADER_TYPES from 'components/header/constants/header.constants';
+import BasicView from 'core/views/basic.view';
 
-export default class HeaderView {
+export default class HeaderView extends BasicView {
     constructor() {
-        this._view = this._buildView();
-    }
-
-    getView() {
-        return this._view;
+        super();
     }
 
     _buildView() {
@@ -22,9 +19,7 @@ export default class HeaderView {
                         </div>
                     </nav>`);
 
-        view.find('a.navbar-brand').click((e) => {
-            pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category);
-        });
+        view.find('a.navbar-brand').click(e => pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, HEADER_TYPES.HEADER_GENERAL.category));
 
         return view;
     }
@@ -37,10 +32,7 @@ export default class HeaderView {
                 `<li class='nav-menu'><a href="#${headerItem.category}">${headerItem.title}</a></li>`
             );
 
-            menuItem.click((e) => {
-                pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, headerItem.category);
-            })
-
+            menuItem.click(e => pubSubInstance.publish(EVENTS.SWITCH_CATEGORY, headerItem.category));
             list.append(menuItem);
         }
     }

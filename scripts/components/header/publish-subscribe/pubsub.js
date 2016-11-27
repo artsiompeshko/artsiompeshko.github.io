@@ -1,19 +1,14 @@
-class PubSubSingleton {
-    constructor() {
-        this.topics = {};
-
-        PubSubSingleton.instance = this;
-    }
-
-    subscribe(topic, handler) {
+let headerPubSubInstance = {
+    topics: {},
+    subscribe: function(topic, handler) {
         if(!this.topics.topic) {
             this.topics.topic = [];
         }
 
         this.topics.topic.push(handler);
-    }
+    },
 
-    publish(topic, args) {
+    publish: function(topic, args) {
         if(!this.topics.topic) {
             return false;
         }
@@ -27,7 +22,6 @@ class PubSubSingleton {
 
         return true;
     }
-}
+};
 
-let headerPubSubInstance = PubSubSingleton.instance ? PubSubSingleton.instance : new PubSubSingleton();
 export default headerPubSubInstance;
