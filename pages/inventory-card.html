@@ -1,0 +1,81 @@
+<div
+    class="card mb-5 text-decoration-none"
+    data-vin="{{dataVin}}"
+  >
+    <div
+      class="row no-gutters"
+    >
+      <div
+        class="col-md-4"
+      >
+        <a
+          href="{{href}}"
+        >
+          <img src="{{src}}" class="card-img-top">
+        </a>
+      </div>
+      <div
+        class="col-md-8"
+      >
+        <div class="card-body">
+          <h5 class="card-title">
+            <a
+              href="{{href}}"
+            >
+              {{title}}
+            </a>
+          </h5>
+          <div class="row">
+            <p class="col-6 text-secondary">VIN</p>
+            <p class="col-6">{{vin}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6 text-secondary">Stock number</p>
+            <p class="col-6">{{stockNumber}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6 text-secondary">Year</p>
+            <p class="col-6">{{year}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6 text-secondary">Make</p>
+            <p class="col-6">{{make}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6 text-secondary">Model</p>
+            <p class="col-6">{{model}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6 text-secondary">Trim</p>
+            <p class="col-6">{{trim}}</p>
+          </div>
+          <div
+            class="card-actions row mt-md-5"
+          >
+            <div
+              class="offset-md-3 col-md-3"
+            >
+              <button
+                class="w-100 sms-button btn btn-primary mb-3"
+                data-widget="livechat"
+                data-vin="{{dataVin}}"
+              >
+                Text Chat
+              </button>
+            </div>
+            <div
+              class="col-md-3"
+            >
+              <button
+                class="w-100 sms-button btn btn-secondary"
+                data-widget="sms"
+                data-vin="{{dataVin}}"
+              >
+                Text Sms
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
