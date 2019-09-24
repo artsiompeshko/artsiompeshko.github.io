@@ -1,0 +1,15 @@
+.header {
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1070;
+}
+
+.logo {
+  width: 130px;
+  height: 39px;
+  background-image: url(https://www.carcodesms.com/static_assets/images/logo_white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
