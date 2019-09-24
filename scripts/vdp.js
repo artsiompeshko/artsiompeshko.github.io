@@ -11,7 +11,7 @@
   const insertCard = async () => {
     let [{ results: [ inventory ] }, cardHtml] = await Promise.all([
       getInventory(),
-      fetch('/pages/inventory-card')
+      fetch('/inventory-card')
         .then(response => response.text())
     ]);
 

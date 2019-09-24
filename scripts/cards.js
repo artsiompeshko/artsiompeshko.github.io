@@ -170,7 +170,7 @@
       getInventories({
         type,
       }),
-      fetch('/pages/inventory-card')
+      fetch('/inventory-card')
         .then(response => response.text())
     ]);
 
@@ -192,8 +192,8 @@
         .replace('{{dataVin}}', inventories[i].vin)
         .replace('{{dataVin}}', inventories[i].vin)
         .replace('{{dataVin}}', inventories[i].vin)
-        .replace('{{href}}', `/pages/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
-        .replace('{{href}}', `/pages/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
+        .replace('{{href}}', `/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
+        .replace('{{href}}', `/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
         .replace('{{stockNumber}}', inventories[i].stockNumber);
     }
 

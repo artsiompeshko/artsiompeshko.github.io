@@ -1,5 +1,5 @@
 (() => {
-  const loadForm = async () => fetch('/pages/settings-form')
+  const loadForm = async () => fetch('/settings-form')
     .then(response => response.text())
     .then((formHtml) => {
       $('body').append(formHtml);
@@ -18,7 +18,7 @@
 
       // navigate to home
       if (location.href.includes('settings.html')) {
-        window.location.href = '/pages/home.html';
+        window.location.href = '/home.html';
       } else { // reload page
         location.reload();
       }
