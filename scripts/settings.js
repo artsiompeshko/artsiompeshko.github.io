@@ -18,7 +18,7 @@
 
       // navigate to home
       if (location.href.includes('settings.html')) {
-        window.location.href = '/home.html';
+        window.location.href = '/index.html';
       } else { // reload page
         location.reload();
       }
