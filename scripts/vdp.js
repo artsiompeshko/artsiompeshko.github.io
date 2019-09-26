@@ -25,6 +25,7 @@
       .replace('{{trim}}', inventory.vehicleInfo.styleInfo.trim)
       .replace('{{dataVin}}', inventory.vin)
       .replace('{{dataVin}}', inventory.vin)
+      .replace('{{displayPrice}}', inventory.prices.displayPrice)
       .replace('{{href}}', `#`)
       .replace('{{href}}', `#`)
       .replace('{{stockNumber}}', inventory.stockNumber);

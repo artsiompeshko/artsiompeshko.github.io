@@ -7,9 +7,18 @@
 }
 
 .logo {
-  width: 130px;
+  width: 78px;
   height: 39px;
-  background-image: url(https://www.carcodesms.com/static_assets/images/logo_white.svg);
+  background-image: url(/static/images/logo.png);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.header__brand h2 {
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+
+.header__brand a {
+  text-decoration: none;
 }

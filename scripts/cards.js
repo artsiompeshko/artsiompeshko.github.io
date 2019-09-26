@@ -192,6 +192,7 @@
         .replace('{{dataVin}}', inventories[i].vin)
         .replace('{{dataVin}}', inventories[i].vin)
         .replace('{{dataVin}}', inventories[i].vin)
+        .replace('{{displayPrice}}', inventories[i].displayPrice)
         .replace('{{href}}', `/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
         .replace('{{href}}', `/vdp.html?vin=${inventories[i].vin}${isSdkButtonAvailable ? '' : '&sdk=disabled'}`)
         .replace('{{stockNumber}}', inventories[i].stockNumber);
