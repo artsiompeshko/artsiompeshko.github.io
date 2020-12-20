@@ -1,0 +1,41 @@
+.svg-snowscene {
+  width: 100%;
+  height: 400px;
+}
+
+.snow {
+  fill: #fff;
+  animation-name: snowing;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.snow:nth-child(2n) {
+  animation-delay: 3s;
+}
+
+.snow:nth-child(3n) {
+  animation-delay: 4.6s;
+  animation-duration: 6.6s;
+}
+
+.snow:nth-child(4n) {
+  animation-delay: 1.6s;
+  animation-duration: 6.4s;
+}
+
+.snow:nth-child(5n) {
+  animation-delay: 5.6s;
+}
+
+@keyframes snowing {
+  0% {
+    fill-opacity: 1;
+  }
+
+  100% {
+    fill-opacity: 0;
+    transform: translateY(400px);
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "lapland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "snow.js",
+  "scripts": {
+    "build-scss": "node ./compile-scss.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artsiompeshko/lapland.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artsiompeshko/lapland/issues"
+  },
+  "homepage": "https://github.com/artsiompeshko/lapland#readme",
+  "devDependencies": {}
+}

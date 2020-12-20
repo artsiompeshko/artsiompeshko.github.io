@@ -1,184 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta
-    charset="UTF-8"
-  >
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <meta
-    http-equiv="X-UA-Compatible"
-    content="ie=edge"
-  >
-  <title>
-      CarCode Test Page
-  </title>
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous"
-  >
-  <link rel="stylesheet" href="/styles/header.css">
-  <link rel="stylesheet" href="/styles/common.css">
-  <link rel="stylesheet" href="/styles/home.css">
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-52765732-1', 'auto');
-    ga('create', 'UA-70954123-1', 'auto', 'namedTracker');
-    ga('send', 'pageview');
-    ga('namedTracker.send', 'pageview');
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js" defer></script>
-  <script src="/scripts/settings.js" defer></script>
-  <script src="/scripts/bootstrap.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=5, width=device-width">
+  <title>Document</title>
+  <script src="./snow.js" async defer></script>
+  <script src='https://dev-dsg11-www.carcodesms.com/widgets/s/aemaga.js' type='text/javascript' async defer></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./scene.css">
+  <link rel="stylesheet" href="./snow.css">
 </head>
 <body>
-  <div class="edmunds-trade-in" data-display="no-banner-overlay"></div>
-  <header class="header d-flex align-items-center justify-content-between position-fixed px-3 py-1 px-md-5 bg-primary">
-    <div class="header__brand navbar-brand">
-      <a title="Home" href="/index.html" class="d-flex align-items-center justify-content-center">
-        <div class="logo"></div>
-        <h2 class="text-white d-none d-md-block">Spartan Ford</h2>
-      </a></div>
-    <ul class="list-group list-group-horizontal bg-primary border-0 padding-0">
-      <li class="list-group-item  bg-primary border-0 p-0">
-        <a href="/new.html" class="nav-link text-white">
-          NEW
-        </a>
-      </li>
-      <li class="list-group-item  bg-primary border-0 p-0">
-        <a href="/used.html" class="nav-link text-white">
-          USED
-        </a>
-      </li>
-      <li class="list-group-item  bg-primary border-0 p-0">
-        <a href="#" class="nav-link text-white">
-          SERVICE
-        </a>
-      </li>
-    </ul>
-  </header>
-  <section>
-    <div
-      class="hero d-flex align-items-center justify-content-center"
-    >
-      <h1
-        class="text-white"
-      >
-        CarCode Test Page
-      </h1>
-    </div>
-  </section>
-  <section
-    class="mx-2 my-2 my-md-5 mx-md-5"
-  >
-    <div id="carousle" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://static.ed.edmunds-media.com/unversioned/img/cpo-refresh/Hero-1-image.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://static.ed.edmunds-media.com/unversioned/img/cpo-refresh/Hero-2-image.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://static.ed.edmunds-media.com/unversioned/img/cpo-refresh/Hero-3-image.jpg" class="d-block w-100">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carousle" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousle" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </section>
-  <footer
-    class="row m-0 px-3 py-5 px-md-5 bg-primary"
-  >
-    <ul class="list-group col-md-4 col-12 bg-primary border-0 padding-0">
-      <li class="list-group-item bg-primary border-0 p-0">
-        <span
-          class="nav-link d-inline-block text-white-50 "
-        >
-          VEHICLES
-        </span>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="/new.html" class="nav-link d-inline-block text-white">
-          New
-        </a>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="/used.html" class="nav-link d-inline-block text-white">
-          Used
-        </a>
-      </li>
-    </ul>
-    <ul class="list-group col-md-4 col-12 bg-primary border-0 padding-0">
-      <li class="list-group-item bg-primary border-0 p-0">
-        <span
-          class="nav-link d-inline-block text-white-50 "
-        >
-          SERVICE
-        </span>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="#" class="nav-link d-inline-block text-white">
-          Schedule
-        </a>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="#" class="nav-link d-inline-block text-white">
-          Specials
-        </a>
-      </li>
-    </ul>
-    <ul class="list-group col-md-4 col-12 bg-primary border-0 padding-0">
-      <li class="list-group-item bg-primary border-0 p-0">
-        <span
-          class="nav-link d-inline-block text-white-50 "
-        >
-          COMPANY
-        </span>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="#" class="nav-link d-inline-block text-white">
-          About Us
-        </a>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="#" class="nav-link d-inline-block text-white">
-          Contact
-        </a>
-      </li>
-      <li class="list-group-item bg-primary border-0 p-0">
-        <a href="/settings.html" class="nav-link d-inline-block text-white">
-          Settings
-        </a>
-      </li>
-    </ul>
-    <h6
-      class="w-100 mt-5 mb-0 text-white-50 text-center"
-    >
-      &copy; Edmunds 2015, CarCode
-    </h6>
-  </footer>
+  <img class="santa" src="images/santa.png" alt="">
+  <svg class="svg-snowscene" xmlns="http://www.w3.org/2000/svg">
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+    <circle class="snow" />
+  </svg>
+  <div class="tree left">
+    <div class="snow-ground"></div>
+  </div>
+  <div class="tree right">
+    <div class="snow-ground"></div>
+  </div>
+  <div class="ground"></div>
 </body>
 </html>
