@@ -11,3 +11,14 @@ function getRandom(min, max) {
     snowflake.setAttribute('r', getRandom(1,3));
   }
 })();
+
+(function() {
+  document.addEventListener("click", () => {
+    const audio = document.querySelector('audio');
+
+    if (audio.paused) {
+      audio.volume = 0.2;
+      audio.play();
+    }
+  });
+})();
